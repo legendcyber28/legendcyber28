@@ -54,6 +54,8 @@
 
 ---
 
+<img align="right" alt="Coding" width="400" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" />
+
 ## 🌐 **Connect with Me:**
 
 <p align="left">
@@ -66,10 +68,8 @@
   <a href="https://www.instagram.com/techfitprashant/" target="_blank">
     <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=instagram&logoColor=white" height="35" />
   </a>
-<a href="https://twitter.com/EternalPrashant" target="_blank">
+  <a href="https://twitter.com/EternalPrashant" target="_blank">
     <img src="https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=twitter&logoColor=white" height="35" />
-</a>
-
   </a>
 </p>
 
@@ -99,7 +99,6 @@
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/legendcyber28/legendcyber28/output/github-snake.svg" />
   <img alt="github-snake" src="https://raw.githubusercontent.com/legendcyber28/legendcyber28/output/github-snake.svg" />
 </picture>
-
 
 ---
 
