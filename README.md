@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="assets/banner.png" alt="Banner" />
+</p>
+
+
+
+
 <h2 align="left">Hi 👋, I'm Prashant Katheriya!</h2>
 
 - 🔭 **Currently Working On:**  
@@ -24,11 +31,7 @@
 
 ---
 
-## 🖼️ **Profile Banner**
 
-<p align="center">
-  <img src="./assets/banner.png" alt="Prashant Katheriya Banner" />
-</p>
 
 ---
 
