@@ -83,7 +83,7 @@
 
 ### 📌 [Stream line Interview: End-to-End Video Interview Application]
 
-- 💻 [GitHub Repository](https://github.com/legendcyber28/project-repo-name)
+- 💻 [GitHub Repository](https://github.com/legendcyber28/Remote-interview-platform)
 - 🌐 [Live Site](https://steady-wasp-81.accounts.dev/sign-in?redirect_url=https%3A%2F%2Fremote-interview-platform-pi.vercel.app%2F)
 - 🧠 Description: A full-stack video interview platform for seamless candidate-recruiter interactions. It features real-time video calls, session scheduling, and user authentication.
 Tech Stack: Next.js, Convex (Database), Stream (Video Calling), Tailwind CSS.
