@@ -2,10 +2,11 @@
   <img src="assets/banner.png" alt="Banner" />
 </p>
 
-
-
-
 <h2 align="left">Hi 👋, I'm Prashant Katheriya!</h2>
+
+<p align="left">
+I'm a final-year engineering student passionate about building tech that bridges AI and real-world applications.
+</p>
 
 - 🔭 **Currently Working On:**  
   A Chat Application with VS Code integration and Docker-based execution.
@@ -17,7 +18,7 @@
   Exploring AI integration in web apps.
 
 - 🌱 **Currently Learning:**  
-  Docker and advanced web development with AI.
+  Learning how to containerize full-stack applications using Docker and exploring AI-based enhancements for user interactions in web apps.
 
 - 💬 **Ask Me About:**  
   C++, DSA, Web Development, and ML.
@@ -25,13 +26,7 @@
 - ⚡ **Fun Fact:**  
   I’m a fitness enthusiast exploring AI-driven tech! 🚀
 
----
-
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&pause=1000&color=F70000&width=435&lines=Welcome+to+My+GitHub+Profile!+👨‍💻;Building+Cool+Stuff+with+Code!+🚀" />
-
----
-
-
 
 ---
 
@@ -55,9 +50,9 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="40" alt="Docker" />
 </div>
 
----
-
 <img align="right" alt="Coding" width="400" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" />
+
+---
 
 ## 🌐 **Connect with Me:**
 
@@ -77,19 +72,41 @@
 </p>
 
 ---
-## 🚀 Latest Projects
+
+## 📝 **Blog**
+
+- 🚀 Read my latest articles & tech insights:  
+  [My Blog](https://your-blog-link.com)
+
+---
+
+## 📬 **Newsletter**
+
+Stay updated with my latest posts and projects:  
+[![Subscribe](https://img.shields.io/badge/Subscribe%20to%20Newsletter-%23FF9800.svg?style=for-the-badge)](https://your-newsletter-signup-link.com)
+
+---
+
+## 🌓 **Theme Toggle**
+
+> *This is a conceptual toggle. You can implement actual dark/light themes in your personal website.*
+
+- Toggle Theme: [🌙 Dark](#) | [☀️ Light](#)
+
+---
 
 ## 🚀 My Projects
 
 ### 📌 [Stream line Interview: End-to-End Video Interview Application]
 
-- 💻 [GitHub Repository](https://github.com/legendcyber28/Remote-interview-platform)
-- 🌐 [Live Site](https://steady-wasp-81.accounts.dev/sign-in?redirect_url=https%3A%2F%2Fremote-interview-platform-pi.vercel.app%2F)
-- 🧠 Description: A full-stack video interview platform for seamless candidate-recruiter interactions. It features real-time video calls, session scheduling, and user authentication.
+- 💻 [GitHub Repository](https://github.com/legendcyber28/Remote-interview-platform)  
+- 🌐 [Live Site](https://steady-wasp-81.accounts.dev/sign-in?redirect_url=https%3A%2F%2Fremote-interview-platform-pi.vercel.app%2F)  
+- 🧠 Description: A full-stack video interview platform for seamless candidate-recruiter interactions. It features real-time video calls, session scheduling, and user authentication.  
 Tech Stack: Next.js, Convex (Database), Stream (Video Calling), Tailwind CSS.
 
+---
 
-## 📊 **GitHub Stats:**
+## 📊 **GitHub Stats**
 
 <p align="left">
   <img src="https://github-readme-stats.vercel.app/api?username=legendcyber28&theme=dark&show_icons=true&hide_border=true" height="150" />
@@ -98,7 +115,7 @@ Tech Stack: Next.js, Convex (Database), Stream (Video Calling), Tailwind CSS.
 
 ---
 
-## 🏆 **GitHub Trophies:**
+## 🏆 **GitHub Trophies**
 
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=legendcyber28&theme=radical&no-frame=false&no-bg=true&margin-w=4" />
@@ -106,7 +123,7 @@ Tech Stack: Next.js, Convex (Database), Stream (Video Calling), Tailwind CSS.
 
 ---
 
-## 🐍 **GitHub Contribution Snake:**
+## 🐍 **GitHub Contribution Snake**
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/legendcyber28/legendcyber28/output/github-snake-dark.svg" />
@@ -116,19 +133,19 @@ Tech Stack: Next.js, Convex (Database), Stream (Video Calling), Tailwind CSS.
 
 ---
 
-## 📈 **Top Contributed Repos:**
+## 📈 **Top Contributed Repos**
 
 ![](https://github-contributor-stats.vercel.app/api?username=legendcyber28&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
 ---
 
-## 💬 **Random Dev Quote:**
+## 💬 **Random Dev Quote**
 
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
 ---
 
-## 🔥 **Visitor Count:**
+## 🔥 **Visitor Count**
 
 <p align="left">
   <img src="https://komarev.com/ghpvc/?username=legendcyber28&label=Profile%20views&color=0e75b6&style=flat" alt="legendcyber28" />
@@ -141,5 +158,3 @@ Tech Stack: Next.js, Convex (Database), Stream (Video Calling), Tailwind CSS.
 <p align="center">
   <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3Rkd3B5M2RhMTV6bzZwNHQ0N3hhZnRpcGh3MjFmMXNzcDdiaHFqdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JsMymUkpdXZAZmM7J7/giphy.gif" height="100" />
 </p>
-
----
