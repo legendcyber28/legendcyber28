@@ -87,15 +87,9 @@ Stay updated with my latest posts and projects:
 [![Subscribe](https://img.shields.io/badge/Subscribe%20to%20Newsletter-%23FF9800.svg?style=for-the-badge)](https://your-newsletter-signup-link.com)
 
 ---
+
+
 -->
-## 🌓 **Theme Toggle**
-
-> *This is a conceptual toggle. You can implement actual dark/light themes in your personal website.*
-
-- Toggle Theme: [🌙 Dark](#) | [☀️ Light](#)
-
----
-
 ## 🚀 My Projects
 
 ### 📌 [Stream line Interview: End-to-End Video Interview Application]
