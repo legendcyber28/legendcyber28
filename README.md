@@ -9,7 +9,7 @@ I'm a final-year engineering student passionate about building tech that bridges
 </p>
 
 - 🔭 **Currently Working On:**  
-  A Chat Application with VS Code integration and Docker-based execution.
+  A real-time chat application that lets users exchange instant messages seamlessly.
 
 - 👥 **Looking to Collaborate On:**  
   Web development and AI/ML projects.
