@@ -93,6 +93,12 @@ Stay updated with my latest posts and projects:
 - 🧠 Description: A full-stack video interview platform for seamless candidate-recruiter interactions. It features real-time video calls, session scheduling, and user authentication.  
 Tech Stack: Next.js, Convex (Database), Stream (Video Calling), Tailwind CSS.
 
+📌 [Gemini ChatGPT Clone: AI Chat Application]
+💻 GitHub Repository: https://github.com/legendcyber28/Chat-gpt
+🌐 Live Site: https://chat-gpt-sable-five.vercel.app/
+🧠 Description: A simple AI chat app with an inbuilt Assistant UI for real-time answers. It uses the Google Gemini API key for generating responses. The project is deployed using GitHub and Vercel.
+Tech: Assistant UI, Google Gemini API, GitHub, Vercel
+Timeline: March 2024 – April 2025
 ---
 
 ## 📊 **GitHub Stats**
