@@ -25,6 +25,8 @@ jobs:
         run: npm install puppeteer
       - name: Vendor three.js
         run: curl -sL --retry 3 -o scripts/rider/three.min.js https://unpkg.com/three@0.150.1/build/three.min.js
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - name: Render rider GIF from live contributions
         run: node scripts/rider/render.mjs
       - name: Commit refreshed GIF
