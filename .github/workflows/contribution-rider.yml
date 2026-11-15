@@ -1,0 +1,36 @@
+name: Contribution rider
+
+on:
+  schedule:
+    - cron: '23 5 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/rider/**'
+      - '.github/workflows/contribution-rider.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install renderer deps
+        run: npm install puppeteer
+      - name: Vendor three.js
+        run: curl -sL --retry 3 -o scripts/rider/three.min.js https://unpkg.com/three@0.150.1/build/three.min.js
+      - name: Render rider GIF from live contributions
+        run: node scripts/rider/render.mjs
+      - name: Commit refreshed GIF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/rider.gif
+          git commit -m "chore: refresh contribution rider GIF" || echo "no changes"
+          git push
