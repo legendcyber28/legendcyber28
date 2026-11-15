@@ -7,6 +7,12 @@ Graduate Engineer Trainee at HCLTech (Nagpur, India), working on enterprise IT s
 - Learning: Docker, Jenkins pipelines, cloud fundamentals
 - Open to: IT support, cloud and software roles, any city in India or remote
 
+## My contribution graph, on two wheels
+
+![The cyclist from my 3D portfolio riding across a skyline of my real contribution data, re-rendered daily](./assets/rider.gif)
+
+The rider is the cyclist from my 3D portfolio, pedalling over bars built from my actual contributions. A GitHub Action re-renders it daily from live data.
+
 ## Selected projects
 
 - [Interactive 3D Portfolio](https://legendcyber28.github.io/prashant-3d-portfolio/) - a cyclist-led, responsive 3D portfolio built with React and Three.js. [Source](https://github.com/legendcyber28/prashant-3d-portfolio)
