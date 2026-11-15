@@ -1,0 +1,175 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{margin:0;background:#ffffff}</style></head><body>
+<script src="/tmp/three.min.js"></script>
+<script>
+const GRID = [[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [3, 1, 1, 1, 4, 4, 1], [4, 0, 0, 0, 0, 2, 2], [2, 1, 1, 0, 1, 0, 0], [0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 2], [4, 2, 1, 1, 2, 1, 1], [0, 1, 1, 4, 0, 1, 0], [1, 0, 0, 0, 0, 0, 0]];
+const params = new URLSearchParams(location.search);
+const T = parseFloat(params.get('t') || '0');
+const W = 880, H = 520;
+const renderer = new THREE.WebGLRenderer({antialias:true});
+renderer.setSize(W, H);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+document.body.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xffffff);
+const cols = GRID.length, rows = 7;
+const aspect = W/H, d = 5.1;
+const cam = new THREE.OrthographicCamera(-d*aspect, d*aspect, d, -d, 0.1, 100);
+cam.position.set(8.5, 8, 8.5);
+cam.lookAt((cols-1)/2, 2.2, (rows-1)/2);
+scene.add(new THREE.HemisphereLight(0xffffff, 0x8899aa, 1.15));
+const dir = new THREE.DirectionalLight(0xffffff, 0.9);
+dir.position.set(6, 12, 4);
+dir.castShadow = true;
+dir.shadow.mapSize.set(2048, 2048);
+dir.shadow.camera.left = -12; dir.shadow.camera.right = 12;
+dir.shadow.camera.top = 12; dir.shadow.camera.bottom = -12;
+scene.add(dir);
+const fill = new THREE.DirectionalLight(0xdfe8ff, 0.3);
+fill.position.set(-6, 4, -6);
+scene.add(fill);
+const GREENS = ['#ebedf0','#9be9a8','#40c463','#30a14e','#216e39'];
+const heights = [];
+for (let c = 0; c < cols; c++) {
+  heights[c] = [];
+  for (let r = 0; r < rows; r++) {
+    const lv = GRID[c][r];
+    const h = lv === 0 ? 0.14 : 0.16 + lv*0.26;
+    heights[c][r] = h;
+    const m = new THREE.Mesh(new THREE.BoxGeometry(0.86, h, 0.86), new THREE.MeshLambertMaterial({color: GREENS[lv]}));
+    m.position.set(c, h/2, r);
+    m.castShadow = true; m.receiveShadow = true;
+    scene.add(m);
+  }
+}
+const ground = new THREE.Mesh(new THREE.PlaneGeometry(60, 60), new THREE.ShadowMaterial({opacity: 0.18}));
+ground.rotation.x = -Math.PI/2; ground.position.set((cols-1)/2, -0.001, (rows-1)/2);
+ground.receiveShadow = true;
+scene.add(ground);
+
+const path = [];
+for (let c = 0; c < cols; c++) {
+  const rr = c%2===0 ? [...Array(rows).keys()] : [...Array(rows).keys()].reverse();
+  for (const r of rr) path.push([c, r]);
+}
+function pathPos(t) {
+  const N = path.length;
+  const seg = t*(N-1), i0 = Math.floor(seg), fr = seg-i0;
+  const [c0,r0] = path[i0], [c1,r1] = path[Math.min(i0+1, N-1)];
+  return {x:c0+(c1-c0)*fr, z:r0+(r1-r0)*fr, y:heights[c0][r0]+(heights[c1][r1]-heights[c0][r0])*fr, dx:c1-c0, dz:r1-r0};
+}
+
+// Realistic-proportion cyclist. Identity kept from his portfolio character:
+// teal hoodie, dark jeans, white sneakers, black hair, bicycle - rebuilt with
+// natural adult proportions, articulated arms, IK pedaling legs, natural face.
+const mats = {
+  hoodie: new THREE.MeshStandardMaterial({color:0x0e8078,roughness:.7}),
+  hood: new THREE.MeshStandardMaterial({color:0x0a5f59,roughness:.75}),
+  skin: new THREE.MeshStandardMaterial({color:0xa9744c,roughness:.55}),
+  hair: new THREE.MeshStandardMaterial({color:0x17181c,roughness:.95}),
+  jeans: new THREE.MeshStandardMaterial({color:0x2c3e55,roughness:.85}),
+  frame: new THREE.MeshStandardMaterial({color:0x30363b,metalness:.55,roughness:.45}),
+  metal: new THREE.MeshStandardMaterial({color:0x9aa2a8,metalness:.7,roughness:.35}),
+  rubber: new THREE.MeshStandardMaterial({color:0x1a1d1d,roughness:.95}),
+  shoe: new THREE.MeshStandardMaterial({color:0xe8e4da,roughness:.6}),
+  sole: new THREE.MeshStandardMaterial({color:0xcfc9bc,roughness:.7}),
+  eye: new THREE.MeshStandardMaterial({color:0x241a12,roughness:.4}),
+  mouth: new THREE.MeshStandardMaterial({color:0x7c4a35,roughness:.6}),
+};
+const box=(p,w,h,dd,m,x,y,z)=>{const o=new THREE.Mesh(new THREE.BoxGeometry(w,h,dd),m);o.position.set(x,y,z);o.castShadow=true;o.receiveShadow=true;p.add(o);return o};
+const ball=(p,r,m,x,y,z,seg=14)=>{const o=new THREE.Mesh(new THREE.SphereGeometry(r,seg,10),m);o.position.set(x,y,z);o.castShadow=true;p.add(o);return o};
+const vv=(x,y,z=0)=>new THREE.Vector3(x,y,z);
+function cylinderBetween(p,a,b,r,material){const dir=b.clone().sub(a),o=new THREE.Mesh(new THREE.CylinderGeometry(r,r,dir.length(),10),material);o.position.copy(a).add(b).multiplyScalar(.5);o.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),dir.normalize());o.castShadow=true;p.add(o);return o}
+
+const rider = new THREE.Group(); scene.add(rider);
+const chassis = new THREE.Group(); rider.add(chassis);
+
+// --- Bicycle: graphite diamond frame, spoked wheels, crank + pedals ---
+const wheelR = .42, wheelY = .44;
+const rear=vv(-.62,wheelY), front=vv(.62,wheelY), crankC=vv(0,.56), saddleP=vv(-.30,1.12), headTube=vv(.44,1.06);
+const wheels=[];
+for (const x of [-.62,.62]) {
+  const wg = new THREE.Group(); wg.position.set(x,wheelY,0); chassis.add(wg);
+  const tor = new THREE.Mesh(new THREE.TorusGeometry(wheelR,.05,10,28), mats.rubber);
+  tor.castShadow = true; wg.add(tor);
+  ball(wg,.05,mats.metal,0,0,0);
+  for (let s=0;s<6;s++){ const a=s*Math.PI/3; cylinderBetween(wg,vv(0,0,0),vv(Math.cos(a)*wheelR*.92,Math.sin(a)*wheelR*.92,0),.008,mats.metal); }
+  wheels.push(wg);
+}
+for (const [a,b] of [[rear,saddleP],[rear,crankC],[crankC,saddleP],[crankC,headTube],[saddleP,headTube],[headTube,front]]) cylinderBetween(chassis,a,b,.035,mats.frame);
+cylinderBetween(chassis,saddleP,vv(-.32,1.22),.03,mats.metal);
+box(chassis,.34,.06,.13,mats.rubber,-.30,1.26,0);
+cylinderBetween(chassis,headTube,vv(.34,1.30),.03,mats.metal);
+cylinderBetween(chassis,vv(.34,1.30,-.26),vv(.34,1.30,.26),.025,mats.rubber);
+
+// --- Rider body (adult proportions, natural riding lean) ---
+ball(chassis,.17,mats.jeans,-.30,1.50,0,16).scale.set(1.15,.85,1);   // pelvis
+cylinderBetween(chassis,vv(-.30,1.52),vv(-.14,2.00),.185,mats.hoodie); // torso, leaning forward
+ball(chassis,.185,mats.hoodie,-.14,2.02,0,16).scale.set(1,.9,.95);      // chest/shoulders
+ball(chassis,.16,mats.hood,-.34,1.90,0,14).scale.set(.9,.8,1);          // hood at back
+box(chassis,.16,.10,.06,mats.hood,-.03,1.72,.17).rotation.x = .2;       // pocket hint
+cylinderBetween(chassis,vv(-.13,2.04),vv(-.10,2.16),.05,mats.skin);     // neck
+
+const head = new THREE.Group(); head.position.set(-.08,2.28,0); chassis.add(head);
+const skull = ball(head,.145,mats.skin,0,0,0,20); skull.scale.set(.92,1.12,.88);
+const hair = ball(head,.15,mats.hair,-.035,.05,0,18); hair.scale.set(.95,.85,.92);
+box(head,.10,.05,.16,mats.hair,.075,.115,0);                            // fringe line
+for (const z of [-.052,.052]) {
+  ball(head,.02,mats.eye,.126,.012,z);                                  // eyes (natural size)
+  box(head,.016,.012,.05,mats.hair,.122,.055,z);                        // brows
+}
+ball(head,.024,mats.skin,.142,-.035,0);                                 // nose
+box(head,.014,.011,.042,mats.mouth,.124,-.088,0);                       // mouth, subtle
+for (const z of [-.124,.124]) ball(head,.028,mats.skin,-.01,0,z);       // ears
+
+// Arms: shoulder -> elbow -> grip, slight natural bend
+for (const s of [-1,1]) {
+  const SJ = vv(-.14,2.00,.19*s), G = vv(.34,1.30,.24*s);
+  const E = vv((SJ.x+G.x)/2-.02,(SJ.y+G.y)/2-.14,.21*s);
+  ball(chassis,.085,mats.hoodie,SJ.x,SJ.y,SJ.z);
+  cylinderBetween(chassis,SJ,E,.068,mats.hoodie);
+  cylinderBetween(chassis,E,G,.052,mats.hoodie);
+  ball(chassis,.055,mats.skin,G.x,G.y,G.z);
+}
+
+// --- Animation: crank-driven IK pedaling ---
+function ikSolve(H,Fx,Fy,L1,L2) {
+  const dx=Fx-H.x, dy=Fy-H.y;
+  let D=Math.hypot(dx,dy);
+  const maxD=L1+L2-.01;
+  let fx=Fx, fy=Fy;
+  if (D>maxD) { const s=maxD/D; fx=H.x+dx*s; fy=H.y+dy*s; D=maxD; }
+  const a=Math.atan2(fy-H.y,fx-H.x);
+  const c=Math.acos(Math.min(1,Math.max(-1,(L1*L1+D*D-L2*L2)/(2*L1*D))));
+  const k1={x:H.x+L1*Math.cos(a+c),y:H.y+L1*Math.sin(a+c)};
+  const k2={x:H.x+L1*Math.cos(a-c),y:H.y+L1*Math.sin(a-c)};
+  return {knee:(k1.x>k2.x?k1:k2), fx, fy};
+}
+
+rider.scale.setScalar(1.5);
+const p = pathPos(T);
+rider.position.set(p.x, p.y, p.z);
+rider.rotation.y = -Math.atan2(p.dz, p.dx);
+const crank = T*Math.PI*2*8;
+for (const w of wheels) w.rotation.z = -crank*2.5;
+chassis.position.y = Math.sin(crank*2)*.015;
+head.rotation.y = -.18 + Math.sin(T*Math.PI*2)*.05;
+
+const crankR = .17, L1=.57, L2=.57;
+for (const s of [-1,1]) {
+  const ang = crank + (s<0?Math.PI:0);
+  const px = crankC.x + crankR*Math.cos(ang), py = crankC.y + crankR*Math.sin(ang);
+  cylinderBetween(chassis, vv(crankC.x,crankC.y,.05*s), vv(px,py,.14*s), .018, mats.metal);
+  box(chassis,.16,.03,.09,mats.rubber,px,py,.185*s);                    // pedal
+  const H = {x:-.30,y:1.50};
+  const sol = ikSolve(H, px, py+.07, L1, L2);
+  const knee = vv(sol.knee.x, sol.knee.y, .12*s), ankle = vv(sol.fx, sol.fy, .155*s);
+  cylinderBetween(chassis, vv(H.x,H.y,.10*s), knee, .078, mats.jeans);  // thigh
+  cylinderBetween(chassis, knee, ankle, .06, mats.jeans);               // shin
+  const sh = box(chassis,.24,.085,.10,mats.shoe,sol.fx+.045,sol.fy-.02,.17*s); // shoe
+  box(chassis,.25,.03,.11,mats.sole,sol.fx+.045,sol.fy-.075,.17*s);     // sole
+}
+renderer.render(scene, cam);
+document.title = 'done';
+</script></body></html>
