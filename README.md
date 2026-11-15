@@ -19,7 +19,7 @@ The rider is the cyclist from my 3D portfolio, pedalling over bars built from my
 - [Sweety - Blood Glucose Tracker](https://github.com/legendcyber28/sweety) - full-stack health tracker with a React frontend, Node.js/Express API and PostgreSQL, including validation, daily and monthly reports and charts. Built as a take-home assignment.
 - [Remote Interview Platform](https://github.com/legendcyber28/Remote-interview-platform) - video interview app with calls, scheduling and authentication. Next.js.
 - [Gemini ChatGPT Clone](https://github.com/legendcyber28/Chat-gpt) - ChatGPT-style chat interface on Google's Gemini API with streaming responses. Next.js and TypeScript.
-- [Coaching Fee Manager](https://github.com/legendcyber28/coaching-fee-manager-mvp) - fee-tracking prototype for coaching institutes, where each teacher's data stays in their own Google Drive.
+- [Coaching Fee Manager](https://github.com/legendcyber28/coaching-fee-manager-mvp) - fee-tracking prototype for coaching institutes: students, batches, payment records and reports.
 
 ## Connect
 
