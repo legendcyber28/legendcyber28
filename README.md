@@ -1,26 +1,56 @@
-# Hi, I'm Prashant Katheriya
+<div align="center">
 
-Graduate Engineer Trainee at HCLTech (Nagpur, India), working on enterprise IT support: Citrix and cloud virtualization, Microsoft 365 administration and ServiceNow incident management on a large enterprise account. Outside work I build full-stack web apps, and I am growing my DevOps skills with Docker, Jenkins and CI/CD.
+<picture>
+  <source media="(max-width: 600px)" srcset="./assets/2-ninja-hero-mobile.gif">
+  <img src="./assets/1-ninja-hero-desktop.gif" width="100%" alt="Prashant Katheriya. Graduate Engineer Trainee at HCLTech. Exploring IT support, cloud and web projects. Learning DevOps.">
+</picture>
 
-- Day job: Citrix and M365 support, admin centre work, ServiceNow queues
-- Building with: TypeScript, React, Next.js, Node.js, PostgreSQL
-- Learning: Docker, Jenkins pipelines, cloud fundamentals
-- Open to: IT support, cloud and software roles, any city in India or remote
+<br><br>
 
-## My contribution graph, on two wheels
+<picture>
+  <source media="(max-width: 600px)" srcset="./assets/4-ninja-way-mobile.png">
+  <img src="./assets/3-ninja-way-desktop.png" width="100%" alt="Career interests: IT support, cloud and software roles, India or remote. Featured repositories and DevOps learning.">
+</picture>
 
-![The cyclist from my 3D portfolio riding across a skyline of my real contribution data, re-rendered daily](./assets/rider.gif)
+<br><br>
 
-The rider is the cyclist from my 3D portfolio, pedalling over bars built from my actual contributions. A GitHub Action re-renders it daily from live data.
+<picture>
+  <source media="(max-width: 600px)" srcset="./assets/6-ninja-tools-mobile.gif">
+  <img src="./assets/5-ninja-tools-desktop.gif" width="100%" alt="IT interests: Citrix, Microsoft 365, ServiceNow. Featured project technologies: TypeScript, React, Next.js, Node.js, PostgreSQL, Three.js. Learning Docker, Jenkins and CI/CD.">
+</picture>
 
-## Selected projects
+<br><br>
 
-- [Interactive 3D Portfolio](https://legendcyber28.github.io/prashant-3d-portfolio/) - a cyclist-led, responsive 3D portfolio built with React and Three.js. [Source](https://github.com/legendcyber28/prashant-3d-portfolio)
-- [Sweety - Blood Glucose Tracker](https://github.com/legendcyber28/sweety) - full-stack health tracker with a React frontend, Node.js/Express API and PostgreSQL, including validation, daily and monthly reports and charts. Built as a take-home assignment.
-- [Remote Interview Platform](https://github.com/legendcyber28/Remote-interview-platform) - video interview app with calls, scheduling and authentication. Next.js.
-- [Gemini ChatGPT Clone](https://github.com/legendcyber28/Chat-gpt) - ChatGPT-style chat interface on Google's Gemini API with streaming responses. Next.js and TypeScript.
-- [Coaching Fee Manager](https://github.com/legendcyber28/coaching-fee-manager-mvp) - fee-tracking prototype for coaching institutes: students, batches, payment records and reports.
+<picture>
+  <source media="(max-width: 600px)" srcset="./assets/8-ninja-intel-mobile.gif">
+  <img src="./assets/7-ninja-intel-desktop.gif" width="100%" alt="GitHub snapshot 16 Nov 2026: 46 public repositories, 1 follower, joined 2022. Public repos by primary language: HTML 13, JavaScript 12, TypeScript 7, C++ 4, CSS 3. Counts are not skill ratings.">
+</picture>
 
-## Connect
+<br><br>
 
-[LinkedIn](https://www.linkedin.com/in/prashant-katheriya/) · [Portfolio](https://legendcyber28.github.io/prashant-3d-portfolio/) · [Email](mailto:prashantkatheriya9970@gmail.com)
+</div>
+
+## S-Rank missions / Featured repositories
+
+| Mission | What it is | Jutsu used |
+| --- | --- | --- |
+| [Interactive 3D Portfolio](https://github.com/legendcyber28/prashant-3d-portfolio) | Cyclist-led interactive world | React, Three.js |
+| [Sweety](https://github.com/legendcyber28/sweety) | Blood glucose tracking assignment | React, Node.js, PostgreSQL |
+| [Remote Interview Platform](https://github.com/legendcyber28/Remote-interview-platform) | Video calls and interview scheduling | Next.js |
+| [Gemini ChatGPT Clone](https://github.com/legendcyber28/Chat-gpt) | Streaming AI chat interface | Next.js, TypeScript |
+| [Coaching Fee Manager](https://github.com/legendcyber28/coaching-fee-manager-mvp) | Coaching fee management app | Web application |
+
+## My contribution village
+
+Still moving, one commit at a time.
+
+![The cyclist from my 3D portfolio riding across my real contribution data](./assets/rider.gif)
+
+## Join the squad
+
+Let's build something useful.
+
+[LinkedIn](https://www.linkedin.com/in/prashant-katheriya/) · [Portfolio](https://legendcyber28.github.io/prashant-3d-portfolio/) · [Instagram](https://www.instagram.com/devspace786/)
+
+
+[Email](mailto:prashantkatheriya9970@gmail.com)
