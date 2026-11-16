@@ -1,36 +1,36 @@
 <div align="center">
 
 <picture>
-  <source media="(max-width: 600px)" srcset="./assets/2-ninja-hero-mobile.gif">
-  <img src="./assets/1-ninja-hero-desktop.gif" width="100%" alt="Prashant Katheriya. Graduate Engineer Trainee at HCLTech. Exploring IT support, cloud and web projects. Learning DevOps.">
+  <source media="(max-width: 600px)" srcset="./assets/2-2-ninja-hero-mobile.gif">
+  <img src="./assets/1-1-ninja-hero-desktop.gif" width="100%" alt="Prashant Katheriya. Graduate Engineer Trainee at HCLTech. Exploring IT support, cloud and web projects. Learning DevOps.">
 </picture>
 
 <br><br>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="./assets/9-ninja-run-mobile.gif">
-  <img src="./assets/9-ninja-run-desktop.gif" width="100%" alt="Animated original ninja character running across the profile with a dust trail.">
+  <source media="(max-width: 600px)" srcset="./assets/10-9-ninja-run-mobile.gif">
+  <img src="./assets/9-9-ninja-run-desktop.gif" width="100%" alt="Animated original ninja character running across the profile with a dust trail.">
 </picture>
 
 <br><br>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="./assets/4-ninja-way-mobile.gif">
-  <img src="./assets/3-ninja-way-desktop.gif" width="100%" alt="Career interests: IT support, cloud and software roles, India or remote. Featured repositories and DevOps learning.">
+  <source media="(max-width: 600px)" srcset="./assets/4-4-ninja-way-mobile.gif">
+  <img src="./assets/3-3-ninja-way-desktop.gif" width="100%" alt="Career interests: IT support, cloud and software roles, India or remote. Featured repositories and DevOps learning.">
 </picture>
 
 <br><br>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="./assets/6-ninja-tools-mobile.gif">
-  <img src="./assets/5-ninja-tools-desktop.gif" width="100%" alt="IT interests: Citrix, Microsoft 365, ServiceNow. Featured project technologies: TypeScript, React, Next.js, Node.js, PostgreSQL, Three.js. Learning Docker, Jenkins and CI/CD.">
+  <source media="(max-width: 600px)" srcset="./assets/6-6-ninja-tools-mobile.gif">
+  <img src="./assets/5-5-ninja-tools-desktop.gif" width="100%" alt="IT interests: Citrix, Microsoft 365, ServiceNow. Featured project technologies: TypeScript, React, Next.js, Node.js, PostgreSQL, Three.js. Learning Docker, Jenkins and CI/CD.">
 </picture>
 
 <br><br>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="./assets/8-ninja-intel-mobile.gif">
-  <img src="./assets/7-ninja-intel-desktop.gif" width="100%" alt="GitHub snapshot 16 Nov 2026: 46 public repositories, 1 follower, joined 2022. Public repos by primary language: HTML 13, JavaScript 12, TypeScript 7, C++ 4, CSS 3. Counts are not skill ratings.">
+  <source media="(max-width: 600px)" srcset="./assets/8-8-ninja-intel-mobile.gif">
+  <img src="./assets/7-7-ninja-intel-desktop.gif" width="100%" alt="GitHub snapshot 16 Nov 2026: 46 public repositories, 1 follower, joined 2022. Public repos by primary language: HTML 13, JavaScript 12, TypeScript 7, C++ 4, CSS 3. Counts are not skill ratings.">
 </picture>
 
 <br><br>
