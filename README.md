@@ -8,8 +8,15 @@
 <br><br>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="./assets/4-ninja-way-mobile.png">
-  <img src="./assets/3-ninja-way-desktop.png" width="100%" alt="Career interests: IT support, cloud and software roles, India or remote. Featured repositories and DevOps learning.">
+  <source media="(max-width: 600px)" srcset="./assets/9-ninja-run-mobile.gif">
+  <img src="./assets/9-ninja-run-desktop.gif" width="100%" alt="Animated original ninja character running across the profile with a dust trail.">
+</picture>
+
+<br><br>
+
+<picture>
+  <source media="(max-width: 600px)" srcset="./assets/4-ninja-way-mobile.gif">
+  <img src="./assets/3-ninja-way-desktop.gif" width="100%" alt="Career interests: IT support, cloud and software roles, India or remote. Featured repositories and DevOps learning.">
 </picture>
 
 <br><br>
